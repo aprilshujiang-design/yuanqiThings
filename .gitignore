@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Xcode user and build data
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Archives, exported apps, signing and credentials
+*.xcarchive/
+*.ipa
+*.dSYM/
+*.mobileprovision
+*.p12
+*.cer
+AuthKey_*.p8
+
+# Local design references (runtime assets live inside *.xcassets)
+/*.png
+/*.svg
+/YuanQiWidget/small-widget-background-source.png
+

@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000001 /* YuanQiThingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000001 /* YuanQiThingsApp.swift */; };
+		A00000000000000000000002 /* EnergyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000002 /* EnergyModels.swift */; };
+		A00000000000000000000003 /* EnergyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000003 /* EnergyStore.swift */; };
+		A00000000000000000000004 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000004 /* AppTheme.swift */; };
+		A00000000000000000000005 /* EnergyOrb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000005 /* EnergyOrb.swift */; };
+		A00000000000000000000006 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000006 /* RootView.swift */; };
+		A00000000000000000000007 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000007 /* TodayView.swift */; };
+		A00000000000000000000008 /* EnergyCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000008 /* EnergyCalendarView.swift */; };
+		A00000000000000000000009 /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000009 /* HabitListView.swift */; };
+		A0000000000000000000000A /* HabitEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000A /* HabitEditorView.swift */; };
+		A0000000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000B /* Assets.xcassets */; };
+		A0000000000000000000000C /* YuanQiWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000D /* YuanQiWidget.swift */; };
+		A0000000000000000000000D /* EnergyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000002 /* EnergyModels.swift */; };
+		A0000000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000E /* Assets.xcassets */; };
+		A0000000000000000000000F /* YuanQiWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B00000000000000000000012 /* YuanQiWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A00000000000000000000012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000014 /* LaunchScreen.storyboard */; };
+		A00000000000000000000013 /* WidgetInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000015 /* WidgetInteraction.swift */; };
+		A00000000000000000000014 /* WidgetInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000015 /* WidgetInteraction.swift */; };
+		A00000000000000000000015 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000016 /* en.lproj */; };
+		A00000000000000000000016 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000017 /* en.lproj */; };
+		A00000000000000000000017 /* CloudSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000018 /* CloudSyncService.swift */; };
+		A00000000000000000000018 /* CloudSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000018 /* CloudSyncService.swift */; };
+		A00000000000000000000019 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000019 /* SettingsView.swift */; };
+		A0000000000000000000001A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000001A /* PrivacyInfo.xcprivacy */; };
+		A0000000000000000000001B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000001B /* PrivacyInfo.xcprivacy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		P00000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E00000000000000000000002 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E00000000000000000000003;
+			remoteInfo = YuanQiWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C00000000000000000000004 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A0000000000000000000000F /* YuanQiWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		11B5DDF2304D178B004F97DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B00000000000000000000001 /* YuanQiThingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuanQiThingsApp.swift; sourceTree = "<group>"; };
+		B00000000000000000000002 /* EnergyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyModels.swift; sourceTree = "<group>"; };
+		B00000000000000000000003 /* EnergyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyStore.swift; sourceTree = "<group>"; };
+		B00000000000000000000004 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		B00000000000000000000005 /* EnergyOrb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyOrb.swift; sourceTree = "<group>"; };
+		B00000000000000000000006 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B00000000000000000000007 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		B00000000000000000000008 /* EnergyCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyCalendarView.swift; sourceTree = "<group>"; };
+		B00000000000000000000009 /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
+		B0000000000000000000000A /* HabitEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitEditorView.swift; sourceTree = "<group>"; };
+		B0000000000000000000000B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0000000000000000000000C /* YuanQiThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuanQiThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0000000000000000000000D /* YuanQiWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuanQiWidget.swift; sourceTree = "<group>"; };
+		B0000000000000000000000E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0000000000000000000000F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00000000000000000000010 /* YuanQiWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YuanQiWidget.entitlements; sourceTree = "<group>"; };
+		B00000000000000000000011 /* YuanQiThings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YuanQiThings.entitlements; sourceTree = "<group>"; };
+		B00000000000000000000012 /* YuanQiWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YuanQiWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00000000000000000000014 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B00000000000000000000015 /* WidgetInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInteraction.swift; sourceTree = "<group>"; };
+		B00000000000000000000016 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		B00000000000000000000017 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		B00000000000000000000018 /* CloudSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSyncService.swift; sourceTree = "<group>"; };
+		B00000000000000000000019 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B0000000000000000000001A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		B0000000000000000000001B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C00000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00000000000000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D00000000000000000000002 /* YuanQiThings */,
+				D00000000000000000000008 /* YuanQiWidget */,
+				D00000000000000000000007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D00000000000000000000002 /* YuanQiThings */ = {
+			isa = PBXGroup;
+			children = (
+				11B5DDF2304D178B004F97DB /* Info.plist */,
+				B00000000000000000000016 /* en.lproj */,
+				B00000000000000000000001 /* YuanQiThingsApp.swift */,
+				B00000000000000000000014 /* LaunchScreen.storyboard */,
+				B00000000000000000000011 /* YuanQiThings.entitlements */,
+				B0000000000000000000001A /* PrivacyInfo.xcprivacy */,
+				D00000000000000000000003 /* Models */,
+				D00000000000000000000004 /* Store */,
+				D00000000000000000000005 /* Components */,
+				D00000000000000000000006 /* Views */,
+				B0000000000000000000000B /* Assets.xcassets */,
+			);
+			path = YuanQiThings;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000002 /* EnergyModels.swift */,
+				B00000000000000000000015 /* WidgetInteraction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000004 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000003 /* EnergyStore.swift */,
+				B00000000000000000000018 /* CloudSyncService.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000005 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000004 /* AppTheme.swift */,
+				B00000000000000000000005 /* EnergyOrb.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000006 /* RootView.swift */,
+				B00000000000000000000007 /* TodayView.swift */,
+				B00000000000000000000019 /* SettingsView.swift */,
+				B00000000000000000000008 /* EnergyCalendarView.swift */,
+				B00000000000000000000009 /* HabitListView.swift */,
+				B0000000000000000000000A /* HabitEditorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0000000000000000000000C /* YuanQiThings.app */,
+				B00000000000000000000012 /* YuanQiWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D00000000000000000000008 /* YuanQiWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B00000000000000000000017 /* en.lproj */,
+				B0000000000000000000000D /* YuanQiWidget.swift */,
+				B0000000000000000000000E /* Assets.xcassets */,
+				B0000000000000000000000F /* Info.plist */,
+				B00000000000000000000010 /* YuanQiWidget.entitlements */,
+				B0000000000000000000001B /* PrivacyInfo.xcprivacy */,
+			);
+			path = YuanQiWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E00000000000000000000001 /* YuanQiThings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00000000000000000000002 /* Build configuration list for PBXNativeTarget "YuanQiThings" */;
+			buildPhases = (
+				C00000000000000000000002 /* Sources */,
+				C00000000000000000000001 /* Frameworks */,
+				C00000000000000000000003 /* Resources */,
+				C00000000000000000000004 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				T00000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = YuanQiThings;
+			productName = YuanQiThings;
+			productReference = B0000000000000000000000C /* YuanQiThings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E00000000000000000000003 /* YuanQiWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00000000000000000000009 /* Build configuration list for PBXNativeTarget "YuanQiWidget" */;
+			buildPhases = (
+				C00000000000000000000006 /* Sources */,
+				C00000000000000000000005 /* Frameworks */,
+				C00000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YuanQiWidget;
+			productName = YuanQiWidget;
+			productReference = B00000000000000000000012 /* YuanQiWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E00000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					E00000000000000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					E00000000000000000000003 = {
+						CreatedOnToolsVersion = 26.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F00000000000000000000001 /* Build configuration list for PBXProject "YuanQiThings" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = D00000000000000000000001;
+			productRefGroup = D00000000000000000000007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E00000000000000000000001 /* YuanQiThings */,
+				E00000000000000000000003 /* YuanQiWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C00000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000015 /* en.lproj in Resources */,
+				A0000000000000000000000B /* Assets.xcassets in Resources */,
+				A00000000000000000000012 /* LaunchScreen.storyboard in Resources */,
+				A0000000000000000000001A /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000016 /* en.lproj in Resources */,
+				A0000000000000000000000E /* Assets.xcassets in Resources */,
+				A0000000000000000000001B /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C00000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00000000000000000000001 /* YuanQiThingsApp.swift in Sources */,
+				A00000000000000000000002 /* EnergyModels.swift in Sources */,
+				A00000000000000000000013 /* WidgetInteraction.swift in Sources */,
+				A00000000000000000000003 /* EnergyStore.swift in Sources */,
+				A00000000000000000000017 /* CloudSyncService.swift in Sources */,
+				A00000000000000000000004 /* AppTheme.swift in Sources */,
+				A00000000000000000000005 /* EnergyOrb.swift in Sources */,
+				A00000000000000000000006 /* RootView.swift in Sources */,
+				A00000000000000000000007 /* TodayView.swift in Sources */,
+				A00000000000000000000019 /* SettingsView.swift in Sources */,
+				A00000000000000000000008 /* EnergyCalendarView.swift in Sources */,
+				A00000000000000000000009 /* HabitListView.swift in Sources */,
+				A0000000000000000000000A /* HabitEditorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C00000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000000000000000000000C /* YuanQiWidget.swift in Sources */,
+				A0000000000000000000000D /* EnergyModels.swift in Sources */,
+				A00000000000000000000014 /* WidgetInteraction.swift in Sources */,
+				A00000000000000000000018 /* CloudSyncService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		T00000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E00000000000000000000003 /* YuanQiWidget */;
+			targetProxy = P00000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F00000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7QHA5JR3Q4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F00000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7QHA5JR3Q4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F00000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YuanQiThings/YuanQiThings.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 27;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YuanQiThings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "元气小事";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.april.smallwins;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F00000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = YuanQiThings/YuanQiThings.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 27;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YuanQiThings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "元气小事";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.april.smallwins;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F00000000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = YuanQiWidget/YuanQiWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 27;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = YuanQiWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.april.smallwins.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F00000000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = YuanQiWidget/YuanQiWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 27;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = YuanQiWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.april.smallwins.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F00000000000000000000001 /* Build configuration list for PBXProject "YuanQiThings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000003 /* Debug */,
+				F00000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00000000000000000000002 /* Build configuration list for PBXNativeTarget "YuanQiThings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000005 /* Debug */,
+				F00000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00000000000000000000009 /* Build configuration list for PBXNativeTarget "YuanQiWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00000000000000000000007 /* Debug */,
+				F00000000000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E00000000000000000000002 /* Project object */;
+}
