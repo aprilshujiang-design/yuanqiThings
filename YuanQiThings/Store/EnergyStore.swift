@@ -405,8 +405,7 @@ final class EnergyStore: ObservableObject {
         if case CloudSyncService.SyncError.unavailable(let status) = error {
             return status == .noAccount ? .signedOut : .unavailable
         }
-        if let cloudError = error as? CKError,
-           [.notAuthenticated, .permissionFailure].contains(cloudError.code) {
+        if let cloudError = error as? CKError, cloudError.code == .notAuthenticated {
             return .signedOut
         }
         return .failed(Self.cloudErrorMessage(error))
@@ -426,10 +425,10 @@ final class EnergyStore: ObservableObject {
             return String(localized: "iCloud 服务繁忙，请稍后重试")
         case .quotaExceeded:
             return String(localized: "iCloud 可用空间不足")
-        case .permissionFailure, .notAuthenticated:
-            return String(localized: "当前安装包没有 iCloud 访问权限，请检查签名与容器配置")
+        case .permissionFailure, .missingEntitlement, .badContainer:
+            return String(localized: "iCloud 访问被拒绝（CloudKit 错误 \(cloudError.code.rawValue)）。请检查安装包的签名和容器权限。")
         case .serverRejectedRequest, .invalidArguments:
-            return String(localized: "iCloud 数据库尚未正确配置，请部署 CloudKit 生产环境")
+            return String(localized: "CloudKit 拒绝了同步请求（错误 \(cloudError.code.rawValue)）。请检查当前环境的数据库配置。")
         case .assetFileNotFound, .assetFileModified:
             return String(localized: "同步文件已变更，请再次同步")
         default:
