@@ -65,19 +65,28 @@ struct SettingsView: View {
                 sectionTitle("关于")
                 settingsCard {
                     VStack(spacing: 0) {
-                        NavigationLink { PrivacyPolicyView() } label: {
-                            settingRow("隐私政策", symbol: "shield.lefthalf.filled", tint: .orange)
-                        }
-                        rowDivider
                         NavigationLink { HelpView() } label: {
                             settingRow("使用帮助", symbol: "questionmark.circle.fill", tint: AppTheme.rose)
                         }
                         rowDivider
-                        NavigationLink { AboutView() } label: {
-                            settingRow("关于元气小事", symbol: "info.circle.fill", tint: AppTheme.lavender, detail: appVersion)
+                        NavigationLink { PrivacyPolicyView() } label: {
+                            settingRow("隐私政策", symbol: "shield.lefthalf.filled", tint: .orange)
+                        }
+                        rowDivider
+                        NavigationLink { TermsView() } label: {
+                            settingRow("使用条款", symbol: "doc.text.fill", tint: AppTheme.lavender)
+                        }
+                        rowDivider
+                        Link(destination: URL(string: "mailto:aprilshujiang@163.com")!) {
+                            settingRow("联系我们", symbol: "envelope.fill", tint: AppTheme.rose)
+                                .accessibilityLabel(Text("联系邮箱 aprilshujiang@163.com"))
                         }
                     }
                 }
+                Text("版本 \(appVersion)")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity)
             }
             .padding(.horizontal, 18)
             .padding(.bottom, 30)
@@ -184,6 +193,7 @@ struct DataAndSyncView: View {
     @State private var document: SettingsBackupDocument?
     @State private var exporting = false
     @State private var importing = false
+    @State private var confirmingRestore = false
     @State private var message: String?
 
     var body: some View {
@@ -218,11 +228,12 @@ struct DataAndSyncView: View {
                 VStack(spacing: 0) {
                     actionRow("导出本地备份", symbol: "square.and.arrow.up") { exportBackup() }
                     Divider().padding(.leading, 54)
-                    actionRow("从文件恢复", symbol: "square.and.arrow.down") { importing = true }
+                    actionRow("从文件恢复", symbol: "square.and.arrow.down") { confirmingRestore = true }
                 }
+                .disabled(!store.isReady)
                 .padding(.horizontal, 16).background(.white.opacity(0.82), in: RoundedRectangle(cornerRadius: 22))
 
-                Label("打卡记录保存在本机和你的私人 iCloud 中。即使暂时无法同步，也可以继续在本机使用。", systemImage: "info.circle.fill")
+                Label("打卡记录保存在本机；iCloud 同步成功后，你的私人 iCloud 中也会有一份副本。暂时无法同步时仍可在本机打卡。", systemImage: "info.circle.fill")
                     .font(.footnote).foregroundStyle(AppTheme.cocoa.opacity(0.62))
                     .padding(16).background(AppTheme.blush.opacity(0.75), in: RoundedRectangle(cornerRadius: 18))
             }
@@ -235,6 +246,12 @@ struct DataAndSyncView: View {
             document = nil
         }
         .fileImporter(isPresented: $importing, allowedContentTypes: [.json]) { importBackup($0) }
+        .confirmationDialog("从文件恢复", isPresented: $confirmingRestore, titleVisibility: .visible) {
+            Button("选择备份文件", role: .destructive) { importing = true }
+            Button("取消", role: .cancel) {}
+        } message: {
+            Text("恢复会先用备份替换本机的小事和打卡记录，随后尝试与 iCloud 合并同步。建议先导出当前记录。")
+        }
         .alert("数据与同步", isPresented: Binding(get: { message != nil }, set: { if !$0 { message = nil } })) {
             Button("好") { message = nil }
         } message: { Text(message ?? "") }
@@ -269,9 +286,8 @@ struct PrivacyPolicyView: View {
     var body: some View {
         ArticlePage(title: "隐私政策", symbol: "shield.lefthalf.filled") {
             ArticleSection("我们保存什么", "元气小事保存你创建的小事、打卡日期和应用偏好，不需要注册账号。")
-            ArticleSection("数据保存位置", "数据保存在这台设备和你的私人 iCloud 容器中。开发者不会将这些数据用于广告或跟踪。")
+            ArticleSection("数据保存位置", "数据保存在这台设备上。iCloud 同步成功后，小事和打卡记录也会存入你的私人 iCloud 容器。开发者不会将这些数据用于广告或跟踪。")
             ArticleSection("你的选择", "你可以在系统设置中关闭 iCloud 或管理通知权限，也可以导出本地备份。")
-            ArticleSection("联系我们", "如对隐私或数据有疑问，请通过“关于元气小事”页面联系我们。")
         }
     }
 }
@@ -280,44 +296,10 @@ struct HelpView: View {
     var body: some View {
         ArticlePage(title: "使用帮助", symbol: "questionmark.circle.fill") {
             ArticleSection("如何打卡", "在“今日”页点一下小事即可获得 +1 元气；再次点击可以取消。")
-            ArticleSection("如何补记", "点击首页日期或日历中的某一天，可以记录之前日子的元气小事。")
-            ArticleSection("小组件没有更新", "打开 App 完成一次同步，并确认 App 与小组件使用同一个 iCloud 账户。")
+            ArticleSection("如何补记", "在“今日”页选择过去的日期，再点击小事补记。在“日历”页点击日期可查看当天记录。")
+            ArticleSection("小组件没有更新", "打开 App 查看首页记录，再回到桌面查看小组件。小组件读取同一设备上的共享记录，无需单独登录 iCloud。")
             ArticleSection("如何保护记录", "保持 iCloud 同步开启，并定期在“数据与同步”中导出一份本地备份。")
         }
-    }
-}
-
-struct AboutView: View {
-    private var version: String { Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0" }
-    var body: some View {
-        ScrollView {
-            VStack(spacing: 22) {
-                ZStack {
-                    Circle().fill(AppTheme.blush).frame(width: 150, height: 150)
-                    Image(systemName: "heart.fill").font(.system(size: 58)).foregroundStyle(AppTheme.rose)
-                    Image(systemName: "sparkles").font(.title).foregroundStyle(AppTheme.gold).offset(x: 58, y: -52)
-                }
-                Text("每一件小事，都值得被看见").font(.title3.bold()).foregroundStyle(AppTheme.cocoa)
-                Text("元气小事帮助你记录生活里的微小胜利。无需追赶，每一次照顾自己，都在让今天慢慢亮起来。")
-                    .font(.body).foregroundStyle(AppTheme.cocoa.opacity(0.66)).multilineTextAlignment(.center)
-                VStack(spacing: 0) {
-                    NavigationLink { PrivacyPolicyView() } label: { aboutRow("隐私政策", "shield.fill") }
-                    Divider().padding(.leading, 48)
-                    NavigationLink { TermsView() } label: { aboutRow("使用条款", "doc.text.fill") }
-                    Divider().padding(.leading, 48)
-                    Link(destination: URL(string: "mailto:aprilshujiang@163.com")!) { aboutRow("联系我们", "envelope.fill") }
-                }
-                .padding(.horizontal, 16).background(.white.opacity(0.82), in: RoundedRectangle(cornerRadius: 22))
-                Text("版本 \(version)").font(.caption).foregroundStyle(.secondary)
-            }.padding(24)
-        }
-        .background(AppTheme.background.ignoresSafeArea())
-        .navigationTitle("关于元气小事").navigationBarTitleDisplayMode(.inline)
-    }
-
-    private func aboutRow(_ title: LocalizedStringKey, _ symbol: String) -> some View {
-        HStack { Image(systemName: symbol).foregroundStyle(AppTheme.rose).frame(width: 32); Text(title).foregroundStyle(AppTheme.cocoa); Spacer(); Image(systemName: "chevron.right").font(.caption).foregroundStyle(.tertiary) }
-            .padding(.vertical, 15).contentShape(Rectangle())
     }
 }
 
